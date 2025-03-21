@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact with Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #efeded;
+
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        section {
+            padding: 30px;
+            border-radius: 10px;
+            margin: 80px auto;
+            max-width: 1000px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .box1 {
+            display:flex ;
+            flex-direction: column;
+        }
+
+        .img2 {
+            width: 500px;
+            height: 350px;
+            top: 100px;
+            left: -50px;
+        }
+         .img1{
+            height:40px;
+            width:40px;
+         }
+        .contact-info,
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .contact-info p,
+        .social-media a {
+            margin: 5px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label,
+        input,
+        textarea,
+        button {
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(255, 255, 0);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(234, 234, 2);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="contact">
+        <div class="box1">
+            <a href="portfolio.html">
+               <img class="img1" src="https://cdn-icons-png.flaticon.com/128/3114/3114883.png">
+            </a>
+            <img class="img2" src="https://media.istockphoto.com/id/1429201424/vector/blog-social-media-platform-influencer-personal-brand-promotion-recent-stories-and-post.jpg?s=612x612&w=0&k=20&c=tROfrRi-btklIadu9ESPOon85w5xjAop_BybZIcO2Lc=">
+        </div>
+        <div class="box2">
+            <h2>Get In Touch With Me</h2>
+            <p>Feel free to reach out for collaborations or just a friendly chat.</p>
+
+            <form id="contact-card" onsubmit="handleSubmit(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" style="color:black;font-weight: bold;">Submit</button>
+            </form>
+            <script>
+                function handleSubmit(event) {
+                    event.preventDefault(); // Prevents page refresh
+                    let name = document.getElementById("name").value;
+                    let email = document.getElementById("email").value;
+                    let message = document.getElementById("message").value;
+            
+                    alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+                }
+            </script>
+        </div>
+    </section>
+</body>
+
+</html>
